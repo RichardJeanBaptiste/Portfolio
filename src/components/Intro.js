@@ -1,0 +1,33 @@
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Avatar from '@material-ui/core/Avatar';
+import Avi from '../../src/static/images/avatar/abc.jpg';
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: 'flex',
+    '& > *': {
+      margin: theme.spacing(1),
+    },
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  small: {
+    width: theme.spacing(3),
+    height: theme.spacing(3),
+  },
+  large: {
+    width: theme.spacing(35),
+    height: theme.spacing(35),
+  },
+}));
+
+export default function Intro() {
+  const classes = useStyles();
+
+  return (
+    <div className={classes.root}>
+      <Avatar alt="Remy Sharp" src={Avi} className={classes.large} />
+    </div>
+  );
+}
