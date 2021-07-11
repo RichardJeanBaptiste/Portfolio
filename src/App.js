@@ -2,6 +2,7 @@ import './App.css';
 import React from 'react';
 import clsx from 'clsx';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
 import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
@@ -21,6 +22,7 @@ import RssFeedIcon from '@material-ui/icons/RssFeed';
 import AboutIcon from '@material-ui/icons/Person';
 import ProjectIcon from '@material-ui/icons/Book';
 import Intro from './components/Intro';
+import FrontEndTab from './components/frontendtab';
 
 const drawerWidth = 240;
 
@@ -85,9 +87,9 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  dividerSpacing:{
-    marginTop: '8%',
-  }
+  TopSpacing:{
+    marginTop: '7%',
+  },
 }));
 
 
@@ -176,15 +178,31 @@ function App() {
         <div className={classes.drawerHeader} />
         {/*********************** Main Content *********************/}
 
-            <Intro/>
+            <div className={classes.TopSpacing}><Intro/></div>
+      
             <br></br>
             <div className={classes.headerText}> 
-                <Typography variant="h3" component="h3">
-                    Lorem Ipsum
+                <Typography variant="h5" component="h5">
+                    [Transitional Text]
                 </Typography>
             </div>
 
-            <Divider className={classes.dividerSpacing}/>
+            <Divider className={classes.TopSpacing}/>
+
+            <Grid container spacing={2}>
+
+              <Grid item xs={6}>
+                <FrontEndTab/>
+              </Grid>
+
+              <Grid item xs={4}>
+                  <Typography variant="h5" component="h5">
+                      [Enter Text Here]
+                  </Typography>
+              </Grid>
+              
+            </Grid>
+            
 
             
             
