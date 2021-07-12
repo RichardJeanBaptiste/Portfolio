@@ -23,6 +23,7 @@ import AboutIcon from '@material-ui/icons/Person';
 import ProjectIcon from '@material-ui/icons/Book';
 import Intro from './components/Intro';
 import FrontEndTab from './components/frontendtab';
+import BackEndTab from './components/backendtab';
 
 const drawerWidth = 240;
 
@@ -183,7 +184,7 @@ function App() {
             <br></br>
             <div className={classes.headerText}> 
                 <Typography variant="h5" component="h5">
-                    [Transitional Text]
+                    [Enter Text Here]
                 </Typography>
             </div>
 
@@ -200,9 +201,28 @@ function App() {
                       [Enter Text Here]
                   </Typography>
               </Grid>
-              
+
             </Grid>
-            
+
+
+            <Divider className={classes.TopSpacing}/>
+
+            <Grid container spacing={2}>
+
+              <Grid item xs={4}>
+                  <Typography variant="h5" component="h5">
+                      [Enter Text Here]
+                  </Typography>
+              </Grid>
+
+              <Grid item xs={6}>
+                <BackEndTab/>
+              </Grid>
+
+            </Grid>
+
+
+
 
             
             
