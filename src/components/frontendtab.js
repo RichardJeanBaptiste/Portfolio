@@ -1,8 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import ProjectModal from './ProjectModal';
+import Data from './itemData';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -28,22 +28,23 @@ export default function FrontEndTab() {
   return (
     <div className={classes.root}>
     <Grid container spacing={3}>
+        {/**  Data Flow - frontendtab -> ProjectModal -> SingleImageList */}
         <Grid item xs={6}>
-            <ProjectModal title="abc" desc="def"/>
+            <ProjectModal title="abc" desc="def" itemData={Data}/>
         </Grid>
 
         <Grid item xs={6}>
-            <Paper className={classes.paper}>item</Paper>
+            <ProjectModal title="abc" desc="def" itemData={Data}/>
         </Grid>
     </Grid>
 
     <Grid container spacing={3}>
         <Grid item xs={6}>
-            <Paper className={classes.paper}>item</Paper>
+            <ProjectModal title="abc" desc="def" itemData={Data}/>
         </Grid>
 
         <Grid item xs={6}>
-            <Paper className={classes.paper}>item</Paper>
+            <ProjectModal title="abc" desc="def" itemData={Data}/>
         </Grid>
     </Grid>
     </div>

@@ -4,7 +4,14 @@ import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import Paper from '@material-ui/core/Paper';
-import comingsoonimg from '../static/images/avatar/coming-soon.jpg';
+import Typography from '@material-ui/core/Typography';
+import SingleImageList from './SingleImageList';
+//import comingsoonimg from '../static/images/avatar/coming-soon.jpg';
+//import comingsoonimg2 from '../static/images/avatar/comingsoon2.jpg';
+//import comingsoonimg3 from '../static/images/avatar/comingsoon3.jpg';
+//import comingsoonimg4 from '../static/images/avatar/comingsoon4.jpg';
+//import comingsoonimg5 from '../static/images/avatar/comingsoon5.jpg';
+//import magicloadingimg from '../static/images/avatar/magicloading.jpg';
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -22,8 +29,15 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(1),
     textAlign: 'center',
     color: theme.palette.text.secondary,
-  }
+  },
+  outerImgStyle:{
+    alignItems: 'center',
+    justifyContent: 'center',
+    width:'85%',
+    height:'85%'
+  },
 }));
+
 
 export default function ProjectModal(props) {
   const classes = useStyles();
@@ -41,7 +55,8 @@ export default function ProjectModal(props) {
     <div>
         {/** Closed Modal View */}
             <Paper className={classes.paperOuter} onClick={handleOpen}>
-                react-transition-group
+                <SingleImageList itemData={props.itemData}/>
+                <Typography variant="h5" component="h5" style={{marginTop: '3%'}}>Project Title</Typography>
             </Paper>
         
       <Modal

@@ -193,6 +193,7 @@ function App() {
             <Grid container spacing={2}>
 
               <Grid item xs={6}>
+                {/** Go to frontendtab.js to edit modal props */}
                 <FrontEndTab/>
               </Grid>
 
