@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
 import Avi from '../../src/static/images/avatar/abc.jpg';
+import { Typography } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -10,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
       margin: theme.spacing(1),
     },
     justifyContent: 'center',
-    alignItems: 'center',
+    marginTop: '20%',
   },
   small: {
     width: theme.spacing(3),
@@ -27,7 +28,7 @@ export default function Intro() {
 
   return (
     <div className={classes.root}>
-      <Avatar alt="Remy Sharp" src={Avi} className={classes.large} />
+      <Avatar alt="Remy Sharp" src={Avi} className={classes.large}/>
     </div>
   );
 }

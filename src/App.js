@@ -31,7 +31,7 @@ import Intro from './components/Intro';
 import FrontEndTab from './components/FrontEndTab';
 import BackEndTab from './components/backendtab';
 
-const drawerWidth = 200;
+const drawerWidth = 170;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -188,62 +188,13 @@ function App() {
       >
         <div className={classes.drawerHeader} />
 
-        
+        {/************************* Main Content ******************/}
+          
+            <Intro/>
+            <Typography variant="h5" component="h5" style={{ display:'flex',justifyContent:'center',alignItems:'center'}}>abcdefghijklmnop</Typography>
 
-        {/*********************** Main Content *********************/}
-
-
-            {/**  Focus On Page Enter */}
-            <div className={classes.TopSpacing}>
-
-                <Intro/>
-
-                <div className={classes.headerText}> 
-                  <Typography variant="h5" component="h5">
-                      Hi, I'm Richard.
-                  </Typography>
-                </div>
-            </div>
-      
-            <br></br>
-            
-
-            <div className={classes.headerText}>
-                <Typography variant="h4" component="h4">
-                    [Transitional Text]
-                </Typography>
-            </div>
-
-            <Divider className={classes.TopSpacing}/>
-
-            <div>
-                <Typography variant="h5" component="h5" style={{ marginLeft: '8%', marginTop: '13%'}}>
-                    Here's some of my Front-End work.
-                </Typography>
-
-                <FrontEndTab/>
-            </div>
-           
-
-
-            <Divider className={classes.TopSpacing}/>
-
-            <Grid container spacing={2}>
-
-              <Grid item xs={4}>
-                  <Typography variant="h5" component="h5">
-                      [Enter Text Here]
-                  </Typography>
-              </Grid>
-
-              <Grid item xs={6}>
-                <BackEndTab/>
-              </Grid>
-
-            </Grid>
-
-        
-        {/*********************** Main Content *********************/}
+  
+         
       </main>
     </div>
     </div>
