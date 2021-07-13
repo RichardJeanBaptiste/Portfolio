@@ -29,27 +29,24 @@ export default function FrontEndTab() {
     <div className={classes.root}>
     <Grid container spacing={3}>
         {/**  Data Flow - frontendtab -> ProjectModal -> SingleImageList */}
-        <Grid item xs={6}>
+        <Grid item xs={4}>
             <ProjectModal title="abc" desc="def" itemData={Data}/>
         </Grid>
 
-        <Grid item xs={6}>
+        <Grid item xs={4}>
             <ProjectModal title="abc" desc="def" itemData={Data}/>
         </Grid>
     </Grid>
 
     <Grid container spacing={3}>
-        <Grid item xs={6}>
+        <Grid item xs={4}>
             <ProjectModal title="abc" desc="def" itemData={Data}/>
         </Grid>
 
-        <Grid item xs={6}>
+        <Grid item xs={4}>
             <ProjectModal title="abc" desc="def" itemData={Data}/>
         </Grid>
     </Grid>
     </div>
   );
-}
-
-
-
+};

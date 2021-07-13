@@ -1,3 +1,9 @@
+/**
+ * Center Focus onEnter
+ * 
+ * Refacftor frontend tab and backend tab
+ * 
+ */
 import './App.css';
 import React from 'react';
 import clsx from 'clsx';
@@ -22,10 +28,10 @@ import RssFeedIcon from '@material-ui/icons/RssFeed';
 import AboutIcon from '@material-ui/icons/Person';
 import ProjectIcon from '@material-ui/icons/Book';
 import Intro from './components/Intro';
-import FrontEndTab from './components/frontendtab';
+import FrontEndTab from './components/FrontEndTab';
 import BackEndTab from './components/backendtab';
 
-const drawerWidth = 240;
+const drawerWidth = 200;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -75,6 +81,8 @@ const useStyles = makeStyles((theme) => ({
       duration: theme.transitions.duration.leavingScreen,
     }),
     marginLeft: -drawerWidth,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   contentShift: {
     transition: theme.transitions.create('margin', {
@@ -90,6 +98,8 @@ const useStyles = makeStyles((theme) => ({
   },
   TopSpacing:{
     marginTop: '7%',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 }));
 
@@ -177,33 +187,43 @@ function App() {
         })}
       >
         <div className={classes.drawerHeader} />
+
+        
+
         {/*********************** Main Content *********************/}
 
-            <div className={classes.TopSpacing}><Intro/></div>
+
+            {/**  Focus On Page Enter */}
+            <div className={classes.TopSpacing}>
+
+                <Intro/>
+
+                <div className={classes.headerText}> 
+                  <Typography variant="h5" component="h5">
+                      Hi, I'm Richard.
+                  </Typography>
+                </div>
+            </div>
       
             <br></br>
-            <div className={classes.headerText}> 
-                <Typography variant="h5" component="h5">
-                    [Enter Text Here]
+            
+
+            <div className={classes.headerText}>
+                <Typography variant="h4" component="h4">
+                    [Transitional Text]
                 </Typography>
             </div>
 
             <Divider className={classes.TopSpacing}/>
 
-            <Grid container spacing={2}>
+            <div>
+                <Typography variant="h5" component="h5" style={{ marginLeft: '8%', marginTop: '13%'}}>
+                    Here's some of my Front-End work.
+                </Typography>
 
-              <Grid item xs={6}>
-                {/** Go to frontendtab.js to edit modal props */}
                 <FrontEndTab/>
-              </Grid>
-
-              <Grid item xs={4}>
-                  <Typography variant="h5" component="h5">
-                      [Enter Text Here]
-                  </Typography>
-              </Grid>
-
-            </Grid>
+            </div>
+           
 
 
             <Divider className={classes.TopSpacing}/>
@@ -222,11 +242,7 @@ function App() {
 
             </Grid>
 
-
-
-
-            
-            
+        
         {/*********************** Main Content *********************/}
       </main>
     </div>
