@@ -26,10 +26,12 @@ import ListItemText from '@material-ui/core/ListItemText';
 import MailIcon from '@material-ui/icons/Mail';
 import RssFeedIcon from '@material-ui/icons/RssFeed';
 import AboutIcon from '@material-ui/icons/Person';
-import ProjectIcon from '@material-ui/icons/Book';
+import DesignIcon from '@material-ui/icons/FormatPaint';
+import ComputerIcon from '@material-ui/icons/ComputerRounded';
 import Intro from './components/Intro';
-import FrontEndTab from './components/FrontEndTab';
-import BackEndTab from './components/backendtab';
+import ProjectItem from './components/ProjectItem';
+import Data from './components/itemData';
+
 
 const drawerWidth = 170;
 
@@ -164,9 +166,14 @@ function App() {
           </ListItem>
 
 
-          <ListItem>
-            <ListItemIcon><ProjectIcon/></ListItemIcon>
-            <ListItemText>Projects</ListItemText>
+          <ListItem onClick={() => document.getElementById('frontend').scrollIntoView()}>
+            <ListItemIcon><DesignIcon/></ListItemIcon>
+            <ListItemText>Front End Projects</ListItemText>
+          </ListItem>
+
+          <ListItem onClick={() => document.getElementById('backend').scrollIntoView()}>
+            <ListItemIcon><ComputerIcon/></ListItemIcon>
+            <ListItemText>Back End Projects</ListItemText>
           </ListItem>
 
           <ListItem>
@@ -185,6 +192,8 @@ function App() {
         className={clsx(classes.content, {
           [classes.contentShift]: open,
         })}
+
+        style={{width: '50%'}}
       >
         <div className={classes.drawerHeader} />
 
@@ -193,12 +202,47 @@ function App() {
             <Intro/>
             <Typography variant="h5" component="h5" style={{ display:'flex',justifyContent:'center',alignItems:'center'}}>abcdefghijklmnop</Typography>
 
-  
-         
+            <Divider style={{marginTop: '12%', marginBottom:'3%'}}/> 
+            <Typography variant="h5" component="h5" style={{display:'flex',alignItems:'center', justifyContent:'center'}}>About Me</Typography>
+
+            <Divider style={{marginTop: '12%', marginBottom:'3%'}}/>   
+
+            <div id="frontend"></div>
+            <Typography variant="h5" component="h5" style={{display:'flex',alignItems:'center', justifyContent:'center'}}>Here's some examples of my Frontend work</Typography>
+              <div style={{ flexGrow: 1, marginTop: '3%', display:'flex', justifyContent:'center', alignItems:'center'}}>
+              
+                <Grid container spacing={3}>
+                    <ProjectItem title="abc" desc="def" itemData={Data}/>
+                    <ProjectItem title="abc" desc="def" itemData={Data}/>
+                    <ProjectItem title="abc" desc="def" itemData={Data}/>
+                </Grid>
+              </div>
+
+            <Divider style={{marginTop: '12%', marginBottom:'3%'}}/>
+
+            <div id="backend"></div>
+            <Typography variant="h5" component="h5" style={{display:'flex',alignItems:'center', justifyContent:'center'}}>Here's some examples of my Backend work</Typography>
+            <div style={{ flexGrow: 1, marginTop: '3%', display:'flex', justifyContent:'center', alignItems:'center'}}>
+              
+              <Grid container spacing={3}> 
+                  <ProjectItem title="abc" desc="def" itemData={Data}/>
+                  <ProjectItem title="abc" desc="def" itemData={Data}/>
+                  <ProjectItem title="abc" desc="def" itemData={Data}/>
+              </Grid>
+            </div>
+
+            <Divider style={{marginTop: '12%', marginBottom:'3%'}}/>
+            <Typography variant="h5" component="h5" style={{display:'flex',alignItems:'center', justifyContent:'center'}}>Contact Me</Typography>
+
+            
+            
       </main>
+        
+        
     </div>
     </div>
   );
 }
 
 export default App;
+

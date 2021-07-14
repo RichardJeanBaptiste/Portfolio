@@ -1,8 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
-import Avi from '../../src/static/images/avatar/abc.jpg';
-import { Typography } from '@material-ui/core';
+import Avi from '../../src/static/images/avatar/blackbuisness.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -11,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
       margin: theme.spacing(1),
     },
     justifyContent: 'center',
-    marginTop: '20%',
+    marginTop: '8%',
   },
   small: {
     width: theme.spacing(3),
