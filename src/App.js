@@ -1,19 +1,26 @@
 import './App.css';
+import React, { useState } from 'react';
 import Box from '@mui/material/Box';
-import Drawer from '@mui/material/Drawer';
-// import CssBaseline from '@mui/material/CssBaseline';
+//import Title from './components/Title';
+import Avatar from '@mui/material/Avatar';
+import maleboy from './assets/male_boy.png';
+import Typed from 'react-typed';
+import PersistentDrawerLeft from './components/PersistantDrawer';
+// import Drawer from '@mui/material/Drawer';
 // import AppBar from '@mui/material/AppBar';
 // import Toolbar from '@mui/material/Toolbar';
-import List from '@mui/material/List';
+// import List from '@mui/material/List';
+// import IconButton from '@mui/material/IconButton';
+// import MenuIcon from '@mui/icons-material/Menu'; 
+// import ListItem from '@mui/material/ListItem';
+// import ListItemIcon from '@mui/material/ListItemIcon';
+// import ListItemText from '@mui/material/ListItemText';
+// import HomeIcon from '@mui/icons-material/Home';
+// import PermIdentityIcon from '@mui/icons-material/PermIdentity';
+// import WorkIcon from '@mui/icons-material/Work';
+// import ChatIcon from '@mui/icons-material/Chat';
 // import Typography from '@mui/material/Typography';
-// import Divider from '@mui/material/Divider';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import HomeIcon from '@mui/icons-material/Home';
-import PermIdentityIcon from '@mui/icons-material/PermIdentity';
-import WorkIcon from '@mui/icons-material/Work';
-import ChatIcon from '@mui/icons-material/Chat';
+//  import Divider from '@mui/material/Divider';
 
 const drawerWidth = 220;
 
@@ -24,6 +31,9 @@ const drawerWidth = 220;
  *  style drawer 
  * 
  *  #c6a459
+ * 
+ * backgroundColor: '#353353',
+ * active color - #FFD15C
  */
 
 
@@ -31,78 +41,67 @@ function App() {
 
   const Styles = {
     root: {
+      display:'flex',
+      width:'100vw',
+      height:'100vh',
+      backgroundColor: '#353353'
     },
-    listItemTextStyle: {
-      marginLeft: '-15px',
+    titleStyle: {
+      position: 'absolute',
+      left: '50%',
+      top: '50%',
+      transform: 'translate(-50%, -50%)',
+    },
+    avatarStyle: {
+      width: 112,
+      height: 112,
+    },
+    typedStyle: {
+      marginLeft: '-22px',
       color: 'whitesmoke',
+      fontSize: '16px',
+      fontFamily: 'Rubik',
+    },
+    aboutmeContainer: {
+      width:'100vw',
+      height:'100vh',
     }
   }
 
+ 
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'row'}}>
-      <Drawer 
-        sx={{ width: drawerWidth }}
-        variant='permanent'
-        anchor='left'    
-      >
-        <Box 
-          sx={{ 
-            backgroundColor: '#353353',
-            height: '100vh',
-            flexShrink: 0,
-            '& .MuiDrawer-paper': {
-              width: drawerWidth,
-              boxSizing: 'border-box',
-            },
-          }}>
-          <List>
 
-            <Box sx={{ display:'flex', flexDirection: 'column',justifyContent:'center',alignItems:'center',width: '22em'}}>
-                <Box sx={{ marginLeft: '-2em'}}>
-                    <ListItem button key='Home'>
-                        <ListItemIcon>
-                          <HomeIcon sx={{ color: '#c6a459'}}/>
-                        </ListItemIcon>
+    <Box > 
+      <Box sx={Styles.root}>
 
-                        <ListItemText primary='Home' sx={Styles.listItemTextStyle}/>
-                    </ListItem>
-
-                    <ListItem button key='About'>
-                        <ListItemIcon>
-                          <PermIdentityIcon sx={{ color: '#c6a459'}}/>
-                        </ListItemIcon>
-
-                        <ListItemText primary='About' sx={Styles.listItemTextStyle}/>
-                    </ListItem>
-
-                    <ListItem button key='Resume'>
-                        <ListItemIcon>
-                          <WorkIcon sx={{ color: '#c6a459'}}/>
-                        </ListItemIcon>
-
-                        <ListItemText primary='Resume' sx={Styles.listItemTextStyle}/>
-                    </ListItem>
-
-                    <ListItem button key='Contact'>
-                        <ListItemIcon>
-                          <ChatIcon sx={{ color: '#c6a459'}}/>
-                        </ListItemIcon>
-
-                        <ListItemText primary='Contact' sx={Styles.listItemTextStyle}/>
-                    </ListItem>
-                </Box>
-                
-            </Box>
-
-          </List>
+        <PersistentDrawerLeft/>
+      
+        {/** Avatar */}
+        <Box sx={Styles.titleStyle}>
+          <Avatar alt="Richard Jean-Baptiste" src={maleboy} sx={Styles.avatarStyle}/>
+          <Typed
+            style={Styles.typedStyle}
+            strings={['Software Developer','Front-End Delevoper', 'Backend Developer']}
+            typeSpeed={40}
+            backSpeed={50}
+            loop
+          />
         </Box>
-      </Drawer>
-      <Box>
-        EFGH
       </Box>
-        
+
+      {/** About Me */}
+      <Box sx={Styles.aboutmeContainer}>
+        <h1>ABCD</h1>
+      </Box>
     </Box>
   )
 }
 
 export default App;
+
+/**
+ * 
+ * <Box sx={Styles.titleStyle}>
+        <Title/>
+      </Box>
+ */
