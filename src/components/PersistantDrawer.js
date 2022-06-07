@@ -98,7 +98,7 @@ export default function PersistentDrawerLeft() {
     return (
         <ListItem disablePadding>
             <ListItemButton sx={{ color: iconColor }}>
-                <ListItemIcon sx={{color: iconColor}} onMouseOver={activeColor} onMouseLeave={nonActiveColor}>
+                <ListItemIcon sx={{color: iconColor}} onMouseOver={activeColor} onMouseLeave={nonActiveColor} onTouchStart={activeColor} onTouchEnd={nonActiveColor}>
                     {props.ICON}
                     <ListItemText primary={<Typography sx={{ fontFamily:'Rubik' }} >{props.text}</Typography>} sx={{ marginLeft: '25px'}} />
                 </ListItemIcon>

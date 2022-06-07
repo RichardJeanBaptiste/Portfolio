@@ -1,12 +1,11 @@
 import './App.css';
 import React, { useState } from 'react';
 import Box from '@mui/material/Box';
-//import Title from './components/Title';
 import Avatar from '@mui/material/Avatar';
 import maleboy from './assets/male_boy.png';
 import Typed from 'react-typed';
 import PersistentDrawerLeft from './components/PersistantDrawer';
-import { autocompleteClasses, Typography } from '@mui/material';
+import Typography from '@mui/material/Typography';
 // import Drawer from '@mui/material/Drawer';
 // import AppBar from '@mui/material/AppBar';
 // import Toolbar from '@mui/material/Toolbar';
@@ -52,13 +51,25 @@ function App() {
       left: '50%',
       top: '50%',
       transform: 'translate(-50%, -50%)',
-      height: '22vh',
-      width: '24vw',
+      height: { xs: '22vh', sm: '22vh', md:'32vh', lg: '24vh', xl: '35vh'},
+      width: { xs: '67vw', sm: '43vw', md: '32vw', lg: '24vw', xl: '25vw'},
     },
     avatarStyle: {
       margin: 'auto',
       width: '50%',
       height: '70%',
+    },
+    subTitleText1: {
+      color: 'whitesmoke',
+      fontSize: {  xs:'24px', sm:'30px', lg: '32px'},
+      fontFamily: 'Rubik',
+      fontWeight: 'bold',
+      marginTop: '10px'
+    },
+    subTitleText2: {
+      color: 'whitesmoke',
+      fontSize: '24px',
+      whiteSpace: 'nowrap',
     },
     typedStyle: {
       //marginLeft: '-22px',
@@ -71,21 +82,6 @@ function App() {
       height:'100vh',
     }
   }
-
-  /**
-   * <Typography variant='h4' component='h4' sx={{ color: 'whitesmoke', fontSize: '16px', fontFamily: 'Rubik'}}>Hi, I'm Richard</Typography>
-              <Typography sx={{ color: 'whitesmoke', fontSize: '16px', fontFamily: 'Rubik'}}>
-                  I'm a <Typed
-                          style={Styles.typedStyle}
-                          strings={['Software Developer','Front-End Delevoper', 'Backend Developer']}
-                          typeSpeed={40}
-                          backSpeed={50}
-                          loop
-                        />
-              </Typography>
-   * 
-   * 
-   */
  
   return (
 
@@ -97,8 +93,8 @@ function App() {
         {/** Avatar */}
         <Box sx={Styles.titleStyle}>
           <Avatar alt="Richard Jean-Baptiste" src={maleboy} sx={Styles.avatarStyle}/>
-          <Typography variant='h4' component='h4' textAlign='center' sx={{ color: 'whitesmoke', fontSize: '32px', fontFamily: 'Rubik', fontWeight: 'bold', marginTop: '10px'}}>Hi, Im Richard</Typography>
-          <Typography varaiant='h4' component='h4' textAlign='center' sx={{ color: 'whitesmoke',  fontSize: '24px', whiteSpace: 'nowrap'}}>
+          <Typography variant='h4' component='h4' textAlign='center' sx={Styles.subTitleText1}>Hi, Im Richard</Typography>
+          <Typography varaiant='h4' component='h4' textAlign='center' sx={Styles.subTitleText2}>
               I'm a <Typed
                       style={{ marginTop: '10px', color: 'whitesmoke', fontSize: '24px', fontFamily: 'Rubik'}}
                       strings={['Software Developer','Front-End Delevoper', 'Backend Developer']}
