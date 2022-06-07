@@ -6,6 +6,7 @@ import Avatar from '@mui/material/Avatar';
 import maleboy from './assets/male_boy.png';
 import Typed from 'react-typed';
 import PersistentDrawerLeft from './components/PersistantDrawer';
+import { Typography } from '@mui/material';
 // import Drawer from '@mui/material/Drawer';
 // import AppBar from '@mui/material/AppBar';
 // import Toolbar from '@mui/material/Toolbar';
@@ -53,11 +54,15 @@ function App() {
       transform: 'translate(-50%, -50%)',
     },
     avatarStyle: {
+      position: 'absolute',
+      left: '50%',
+      top: '-85%',
+      transform: 'translate(-50%, -50%)',
       width: 112,
       height: 112,
     },
     typedStyle: {
-      marginLeft: '-22px',
+      //marginLeft: '-22px',
       color: 'whitesmoke',
       fontSize: '16px',
       fontFamily: 'Rubik',
@@ -79,13 +84,19 @@ function App() {
         {/** Avatar */}
         <Box sx={Styles.titleStyle}>
           <Avatar alt="Richard Jean-Baptiste" src={maleboy} sx={Styles.avatarStyle}/>
-          <Typed
-            style={Styles.typedStyle}
-            strings={['Software Developer','Front-End Delevoper', 'Backend Developer']}
-            typeSpeed={40}
-            backSpeed={50}
-            loop
-          />
+          <Box sx={{ display: 'flex', flexDirection: 'column'}}>
+              <Typography variant='h4' component='h4'>Hi, I'm Richard</Typography>
+              <Typography sx={{ color: 'whitesmoke', fontSize: '16px', fontFamily: 'Rubik'}}>
+                  I'm a <Typed
+                          style={Styles.typedStyle}
+                          strings={['Software Developer','Front-End Delevoper', 'Backend Developer']}
+                          typeSpeed={40}
+                          backSpeed={50}
+                          loop
+                        />
+              </Typography>
+              
+          </Box>
         </Box>
       </Box>
 
