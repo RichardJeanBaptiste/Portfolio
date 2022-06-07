@@ -6,7 +6,7 @@ import Avatar from '@mui/material/Avatar';
 import maleboy from './assets/male_boy.png';
 import Typed from 'react-typed';
 import PersistentDrawerLeft from './components/PersistantDrawer';
-import { Typography } from '@mui/material';
+import { autocompleteClasses, Typography } from '@mui/material';
 // import Drawer from '@mui/material/Drawer';
 // import AppBar from '@mui/material/AppBar';
 // import Toolbar from '@mui/material/Toolbar';
@@ -52,14 +52,13 @@ function App() {
       left: '50%',
       top: '50%',
       transform: 'translate(-50%, -50%)',
+      height: '22vh',
+      width: '24vw',
     },
     avatarStyle: {
-      position: 'absolute',
-      left: '50%',
-      top: '-85%',
-      transform: 'translate(-50%, -50%)',
-      width: 112,
-      height: 112,
+      margin: 'auto',
+      width: '50%',
+      height: '70%',
     },
     typedStyle: {
       //marginLeft: '-22px',
@@ -73,6 +72,20 @@ function App() {
     }
   }
 
+  /**
+   * <Typography variant='h4' component='h4' sx={{ color: 'whitesmoke', fontSize: '16px', fontFamily: 'Rubik'}}>Hi, I'm Richard</Typography>
+              <Typography sx={{ color: 'whitesmoke', fontSize: '16px', fontFamily: 'Rubik'}}>
+                  I'm a <Typed
+                          style={Styles.typedStyle}
+                          strings={['Software Developer','Front-End Delevoper', 'Backend Developer']}
+                          typeSpeed={40}
+                          backSpeed={50}
+                          loop
+                        />
+              </Typography>
+   * 
+   * 
+   */
  
   return (
 
@@ -84,25 +97,24 @@ function App() {
         {/** Avatar */}
         <Box sx={Styles.titleStyle}>
           <Avatar alt="Richard Jean-Baptiste" src={maleboy} sx={Styles.avatarStyle}/>
-          <Box sx={{ display: 'flex', flexDirection: 'column'}}>
-              <Typography variant='h4' component='h4'>Hi, I'm Richard</Typography>
-              <Typography sx={{ color: 'whitesmoke', fontSize: '16px', fontFamily: 'Rubik'}}>
-                  I'm a <Typed
-                          style={Styles.typedStyle}
-                          strings={['Software Developer','Front-End Delevoper', 'Backend Developer']}
-                          typeSpeed={40}
-                          backSpeed={50}
-                          loop
-                        />
-              </Typography>
-              
-          </Box>
+          <Typography variant='h4' component='h4' textAlign='center' sx={{ color: 'whitesmoke', fontSize: '32px', fontFamily: 'Rubik', fontWeight: 'bold', marginTop: '10px'}}>Hi, Im Richard</Typography>
+          <Typography varaiant='h4' component='h4' textAlign='center' sx={{ color: 'whitesmoke',  fontSize: '24px', whiteSpace: 'nowrap'}}>
+              I'm a <Typed
+                      style={{ marginTop: '10px', color: 'whitesmoke', fontSize: '24px', fontFamily: 'Rubik'}}
+                      strings={['Software Developer','Front-End Delevoper', 'Backend Developer']}
+                      typeSpeed={40}
+                      backSpeed={50}
+                      loop
+                    />
+          </Typography>
+          
         </Box>
       </Box>
 
       {/** About Me */}
       <Box sx={Styles.aboutmeContainer}>
         <h1>ABCD</h1>
+        
       </Box>
     </Box>
   )
