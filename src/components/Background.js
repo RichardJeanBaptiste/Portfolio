@@ -14,7 +14,7 @@ export default function Background() {
         },
         backgroundBox: {
             position: 'relative',
-            margin: '0px auto',
+            margin: '-10rem auto',
         },
         backgroundTitle: {
             fontSize: '1.9rem',
