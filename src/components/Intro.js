@@ -2,7 +2,7 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
-import Button from '@mui/material/Button';
+import a from '../assets/test-page.pdf';
 
 
 export default function Intro() {
@@ -26,6 +26,10 @@ export default function Intro() {
         },
     }
 
+    const openCV = () => {
+        window.open(a);
+    }
+
     return (
         <Box sx={{ width: '100vw', height: '100vh'}}> 
             <Box sx={Styles.intro}>
@@ -37,11 +41,11 @@ export default function Intro() {
                 </Typography>
                 <Box sx={{ display: 'flex', flexDirection: 'row', marginTop:'10%'}}>
                     <Typography variant='subtitle1' sx={{fontSize: '2rem'}}>Get in touch here  {'->'} </Typography>
-                    <Link href="#" sx={{fontSize: '2rem', marginLeft: '13px', marginTop:'8px',fontFamily:'Grape Nuts'}}>Richinbk1@gmail.com</Link>
+                    <Link href='mailto:Richinbk1@gmail.com' sx={{fontSize: '2rem', marginLeft: '13px', marginTop:'8px',fontFamily:'Grape Nuts'}}>Richinbk1@gmail.com</Link>
                 </Box>
                 <Box sx={{ display: 'flex', flexDirection: 'row', marginTop:'5%'}}>
                     <Typography variant='subtitle1' sx={{fontSize: '2rem'}}>Get my CV {'->'} </Typography>
-                    <Link href="#" sx={{fontSize: '2rem', marginLeft: '13px', marginTop:'8px',fontFamily:'Grape Nuts', color: '#AA170D'}}>Here</Link>
+                    <Link href="#" onClick={openCV} sx={{fontSize: '2rem', marginLeft: '13px', marginTop:'8px',fontFamily:'Grape Nuts', color: '#AA170D'}}>Here</Link>
                 </Box>
             </Box>
         </Box>

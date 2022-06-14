@@ -31,9 +31,9 @@ export default function Footer() {
             <Box sx={Styles.main}>
                 <Typography sx={{paddingRight: '65%', fontSize: '1.5rem'}} variant='body1'>Developed By Richard Jean-Baptiste</Typography>
                 <Box sx={Styles.rightFooter}>
-                    <Link href='#' variant='body1' sx={{ fontSize: '1.5rem'}}>Github</Link>
-                    <Link href='#' variant='body1' sx={{ fontSize: '1.5rem', marginLeft: '4rem'}}>Email</Link>
-                    <Link href='#' variant='body1' sx={{ fontSize: '1.5rem', marginLeft: '4rem'}}>Blog</Link>
+                    <Link href='https://github.com/RichardJeanBaptiste' underline='hover' variant='body1' sx={{ fontSize: '1.5rem'}}>Github</Link>
+                    <Link href='mailto:Richinbk1@gmail.com' variant='body1' underline='hover' sx={{ fontSize: '1.5rem', marginLeft: '4rem'}}>Email</Link>
+                    <Link href='#' variant='body1' underline='hover' sx={{ fontSize: '1.5rem', marginLeft: '4rem'}}>Blog</Link>
                 </Box>
             </Box>
         </Box>
