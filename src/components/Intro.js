@@ -11,14 +11,15 @@ export default function Intro() {
         intro: {
           width: { lg: '40vw'},
           height: { lg: '60vh'},
-          marginTop: { lg: '19vh'},
-          marginLeft: { lg: '10vw'}
+          marginTop: {xs:'6em', lg: '19vh'},
+          marginLeft: {xs:'3em', lg: '10vw'}
         },
         introTitle: {
     
         },
         introBody: {
-          marginTop: '10%',
+          marginTop: {xs:'18%', lg: '10%'},
+          fontSize: {xs: '28px'},
         },
         introBodySubtitle: {
           marginTop: '10%',
