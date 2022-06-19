@@ -19,6 +19,7 @@ export default function Background() {
         backgroundTitle: {
             fontSize: '1.9rem',
             color: 'dodgerblue',
+            margin: {xs: 'auto'}
         },
         backgroundBody: {
             marginTop: '1.1%',
@@ -34,9 +35,9 @@ export default function Background() {
 
     return (
         <Box sx={Styles.root}>
-            <Stack direction='row' spacing={'9%'} sx={Styles.backgroundBox}>
+            <Stack direction={{ xs: 'column', lg:'row'}} spacing={'9%'} sx={Styles.backgroundBox}>
                 <Typography variant='body1' component='p' sx={Styles.backgroundTitle}>Background</Typography>
-                <Stack direction='column' spacing={'4%'}>
+                <Stack direction='column' spacing={'4%'} sx={{ width: {xs:'90vw'}, margin: {xs:'-4rem auto'}}}>
                     <Typography variant='body1' component='p' sx={Styles.backgroundBody}>
                         I'm currently a Freelance Engineer based in New York building things for the web and for mobile.
                         I recently graduated from Brooklyn College University earning my Bachelors in Computer Science with a 3.5 gpa.
