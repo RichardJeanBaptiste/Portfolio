@@ -8,34 +8,37 @@ export default function Skills() {
 
     const Styles = {
         root: {
-            display: 'flex',
             width: '100vw',
-            height: '50vh',
-            marginTop: {xs: '17rem', lg: '-4%'}
-        },
-        mainStack: {
-            position: 'relative',
-            margin: {lg:'0px auto'},
-            flexWrap: 'wrap',
-            //marginLeft: {xs: '6%'},
-            marginLeft: 'auto',
-            marginRight: 'auto',
-            marginTop: {xs: '8%', lg:'3%'},
-        },
-        title: {
-            fontWeight: 'bold',
-            fontSize: '1rem'
+            height: '70vh',
+            marginTop:'4%',
         },
         skillsTitle: {
             color: 'dodgerblue',
-            fontSize: '1.9rem',
-            fontWeight: 'bold',
-            marginLeft: 'auto',
-            marginRight: 'auto',
+            fontSize: { lg: '46px'},
         },
+        mainStack: {
+           marginTop: '2%',
+        }
     }
 
     const SkillRow = (props) => {
+
+        const Styles = {
+            root: {
+                marginTop: '2%'
+            },
+            titleStyle: {
+                fontSize: { lg: '1.75rem'},
+                textDecoration:'underline',
+                color: '#511730',
+                fontWeight: 'bold',
+            },
+            bodyStyle: {
+                fontSize: { lg: '1.5rem'},
+                fontWeight: '700',
+                
+            }
+        }
 
         const test = () => {    
             
@@ -47,33 +50,26 @@ export default function Skills() {
 
         return (
             <Stack direction='column' spacing={2}>
-                <Typography variant='h6' component='h6' sx={Styles.title} onClick={test}>{props.title}</Typography>
+                <Typography variant='h6' component='h6'  onClick={test} sx={Styles.titleStyle}>{props.title}</Typography>
                 {props.data.map(x => {
-                    return <Typography variant='body1' component='p'>{x}</Typography>
+                    return <Typography variant='body1' component='p' sx={Styles.bodyStyle}>{x}</Typography>
                 })}
             </Stack>
         )
     }
 
-
     return (
         <Box sx={Styles.root}>
-            <Box sx={{ display:'flex', flexDirection: 'column', width:'100vw'}}>
-                <Typography variant='h6' component='h6' sx={Styles.skillsTitle}>Skills</Typography>
-                <Stack direction='row' spacing={{ xs: '2rem', lg:'12rem'}} sx={Styles.mainStack}>
-                    <SkillRow title='LANGUAGES' data={['Javascript (ES6)','TypeScript','HTML', 'CSS', 'Python', 'SQL', 'MongoDB']}/>
-                    <SkillRow title='FRAMEWORKS' data={['React','React Native', 'Node', 'Express', 'Flask']}/>
-                    <SkillRow title='TOOLS' data={['Bash', 'Git/Github', 'Postman']}/>
+            <Typography variant='h6' component='h6' align='center' sx={Styles.skillsTitle}>Skills</Typography>
+            <Box sx={{ display: 'flex', width: '100vw', height:'60vh', justifyContent: 'center'}}>
+            <Stack direction='row' spacing={{ xs: '2rem', lg:'13rem'}} sx={Styles.mainStack}>
+                <SkillRow title='LANGUAGES' data={['Javascript (ES6)','TypeScript','HTML', 'CSS', 'Python', 'SQL', 'MongoDB']}/>
+                <SkillRow title='FRAMEWORKS' data={['React','React Native', 'Node', 'Express', 'Flask']}/>
+                <SkillRow title='TOOLS' data={['Bash', 'Git/Github', 'Postman']}/>
                 </Stack>
             </Box>
         </Box>
     )
+    
 }
 
-/**
- * <Stack direction={{ xs: 'row', lg: 'row'}} spacing={{ xs: '2rem', lg: '12rem'}} sx={Styles.mainStack}>
-                <SkillRow title='LANGUAGES' data={['Javascript (ES6)','TypeScript','HTML', 'CSS', 'Python', 'SQL', 'MongoDB']}/>
-                <SkillRow title='FRAMEWORKS' data={['React','React Native', 'Node', 'Express', 'Flask']}/>
-                <SkillRow title='TOOLS' data={['Bash', 'Git/Github', 'Postman']}/>
-            </Stack>
- */

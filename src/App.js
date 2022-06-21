@@ -14,11 +14,13 @@ function App() {
     typography: {
       allVariants: {
         fontFamily: 'Grape Nuts',
+        fontWeight: 700,
       }
     },
     link: {
       allVariants: {
         fontFamily: 'Grape Nuts',
+        color: 'dodgerblue',
       }
     }
   })

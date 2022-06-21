@@ -8,23 +8,52 @@ import a from '../assets/test-page.pdf';
 export default function Intro() {
 
     const Styles = {
-        intro: {
-          width: { lg: '40vw'},
-          height: { lg: '60vh'},
-          marginTop: {xs:'6em', lg: '19vh'},
-          marginLeft: {xs:'3em', lg: '10vw'}
+        root: {
+            width: '100vw',
+            height: '100vh',
         },
-        introTitle: {
-    
+        intro: {
+            width: { xs:'90vw', lg: '50vw'},
+            height: { lg: '61vh'},
+            marginTop: { xs:'20%', lg: '7%'},
+            marginLeft: { xs:'6%', lg: '10%'},
         },
         introBody: {
-          marginTop: {xs:'18%', lg: '10%'},
-          fontSize: {xs: '28px'},
+            fontSize: {xs: '25px', lg: '2.225rem'},
+            marginTop: { xs:'10%', lg: '8%'},
         },
-        introBodySubtitle: {
-          marginTop: '10%',
-          fontSize: '2rem',
+        subtitle1: {
+            display: 'flex',
+            flexDirection: {lg: 'row'},
+            marginTop: { xs:'2%', lg: '10%'},
         },
+        subtitle1Title: {
+            fontSize: { xs:'21px', lg: '24px'},
+
+        },
+        subtitle1Link: {
+            fontFamily: 'Grape Nuts',
+            fontSize: { xs:'18px', lg: '24px'},
+            marginLeft: { xs:'5px', lg: '13px'},
+            marginTop: { xs:'7px', lg: '6.5px'}
+
+        },
+        subtitle2: {
+            display: 'flex',
+            flexDirection: { lg: 'row'},
+            marginTop: { xs:'5%', lg: '2.5%'},
+        },
+        subtitle2Title: {
+            fontSize: { xs:'21px', lg: '24px'},
+        },
+        subtitle2Link: {
+            fontFamily: 'Grape Nuts',
+            color: '#AA170D',
+            fontSize: { xs:'18px', lg: '24px'},
+            marginLeft: { xs:'11px', lg: '13px'},
+            marginTop: { xs:'4.5px', lg: '6.5px'},
+        }
+
     }
 
     const openCV = () => {
@@ -32,7 +61,7 @@ export default function Intro() {
     }
 
     return (
-        <Box sx={{ width: '100vw', height: '100vh'}}> 
+        <Box sx={Styles.root}>
             <Box sx={Styles.intro}>
                 <Typography variant='h2' component='h2'>Hello!</Typography>
                 <Typography variant='h4' component='h4' sx={Styles.introBody}>
@@ -40,15 +69,16 @@ export default function Intro() {
                     in building exceptional digital experiences. Currently, I'm focused
                     on building products using React/React-Native and NodeJS.
                 </Typography>
-                <Box sx={{ display: 'flex', flexDirection: { xs:'column', lg: 'row'}, marginTop:'10%'}}>
-                    <Typography variant='subtitle1' sx={{fontSize: '2rem'}}>Get in touch here  {'->'} </Typography>
-                    <Link href='mailto:Richinbk1@gmail.com' sx={{fontSize: '2rem', marginLeft: '13px', marginTop:'8px',fontFamily:'Grape Nuts'}}>Richinbk1@gmail.com</Link>
+                <Box sx={Styles.subtitle1}>
+                    <Typography variant='subtitle1' sx={Styles.subtitle1Title}>Get in touch here  {'->'} </Typography>
+                    <Link href='mailto:Richinbk1@gmail.com' sx={Styles.subtitle1Link}>Richinbk1@gmail.com</Link>
                 </Box>
-                <Box sx={{ display: 'flex', flexDirection: { xs:'column', lg: 'row'}, marginTop:'5%'}}>
-                    <Typography variant='subtitle1' sx={{fontSize: '2rem'}}>Get my CV {'->'} </Typography>
-                    <Link href="#" onClick={openCV} sx={{fontSize: '2rem', marginLeft: '13px', marginTop:'8px',fontFamily:'Grape Nuts', color: '#AA170D'}}>Here</Link>
+                <Box sx={Styles.subtitle2}>
+                    <Typography variant='subtitle1' sx={Styles.subtitle2Title}>Get my CV {'->'} </Typography>
+                    <Link href="#" onClick={openCV} sx={Styles.subtitle2Link}>Here</Link>
                 </Box>
             </Box>
         </Box>
     )
+   
 }   
