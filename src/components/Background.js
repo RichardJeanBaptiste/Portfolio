@@ -8,20 +8,20 @@ export default function Background() {
     const Styles = {
         root: {
             width: '100vw',
-            height: '50vh',
-            marginTop: '-8%',
-            paddingBottom: '4%',
+            height: '100vh',
+            //marginTop: '8%',
+            paddingBottom: '20%',
         },
         backgroundTitle: {
             color: 'dodgerblue',
-            fontSize: { lg: '36px'},
+            fontSize: { xs:'1.98rem', lg: '36px'},
         },
         backgroundBox: {
-            marginTop: { lg: '2%'}
+            marginTop: { xs:'4%', lg: '2%'}
         },
         backgroundBody: {
-            fontSize: { lg: '26px'},
-            width: { lg: '50vw'},
+            fontSize: { xs:'1.7rem', lg: '26px'},
+            width: { xs:'75vw', lg: '50vw'},
             margin: 'auto',
             paddingBottom: '2%',
             fontWeight: '700',
@@ -33,7 +33,7 @@ export default function Background() {
         <Box sx={Styles.root}>
             <Typography  variant='body1' component='p' align='center' sx={Styles.backgroundTitle}>Background</Typography>
             <Box sx={Styles.backgroundBox}>
-                <Typography variant='body1' component='p' align='center' sx={Styles.backgroundBody}>
+                <Typography variant='body1' component='p' align='left' sx={Styles.backgroundBody}>
                     I'm currently a Freelance Engineer based in New York building things for the web and for mobile.
                     I recently graduated from Brooklyn College University earning my Bachelors in Computer Science with a 3.5 gpa.
                 </Typography>

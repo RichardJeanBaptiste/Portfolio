@@ -9,15 +9,15 @@ export default function Skills() {
     const Styles = {
         root: {
             width: '100vw',
-            height: '70vh',
-            marginTop:'4%',
+            height: '100vh',
+            marginTop: '4%',
         },
         skillsTitle: {
             color: 'dodgerblue',
-            fontSize: { lg: '46px'},
+            fontSize: { xs:'2.5rem', lg: '46px'},
         },
         mainStack: {
-           marginTop: '2%',
+           marginTop: '3%',
         }
     }
 
@@ -34,9 +34,8 @@ export default function Skills() {
                 fontWeight: 'bold',
             },
             bodyStyle: {
-                fontSize: { lg: '1.5rem'},
-                fontWeight: '700',
-                
+                fontSize: { xs:'1.4rem', lg: '1.5rem'},
+                fontWeight: 700,
             }
         }
 
@@ -62,10 +61,10 @@ export default function Skills() {
         <Box sx={Styles.root}>
             <Typography variant='h6' component='h6' align='center' sx={Styles.skillsTitle}>Skills</Typography>
             <Box sx={{ display: 'flex', width: '100vw', height:'60vh', justifyContent: 'center'}}>
-            <Stack direction='row' spacing={{ xs: '2rem', lg:'13rem'}} sx={Styles.mainStack}>
-                <SkillRow title='LANGUAGES' data={['Javascript (ES6)','TypeScript','HTML', 'CSS', 'Python', 'SQL', 'MongoDB']}/>
-                <SkillRow title='FRAMEWORKS' data={['React','React Native', 'Node', 'Express', 'Flask']}/>
-                <SkillRow title='TOOLS' data={['Bash', 'Git/Github', 'Postman']}/>
+                <Stack direction='row' spacing={{ xs: '1rem', lg:'13rem'}} sx={Styles.mainStack}>
+                    <SkillRow title='LANGUAGES' data={['Javascript (ES6)','TypeScript','HTML', 'CSS', 'Python', 'SQL', 'MongoDB']}/>
+                    <SkillRow title='FRAMEWORKS' data={['React','React Native', 'Node', 'Express', 'Flask']}/>
+                    <SkillRow title='TOOLS' data={['Bash', 'Git/Github', 'Postman']}/>
                 </Stack>
             </Box>
         </Box>

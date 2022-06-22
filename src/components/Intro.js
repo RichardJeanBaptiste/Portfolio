@@ -11,21 +11,22 @@ export default function Intro() {
         root: {
             width: '100vw',
             height: '100vh',
+            //height: { xs:'60vh', lg: '100vh'},
         },
         intro: {
             width: { xs:'90vw', lg: '50vw'},
             height: { lg: '61vh'},
-            marginTop: { xs:'20%', lg: '7%'},
+            marginTop: { xs:'40%', lg: '7%'},
             marginLeft: { xs:'6%', lg: '10%'},
         },
         introBody: {
             fontSize: {xs: '25px', lg: '2.225rem'},
-            marginTop: { xs:'10%', lg: '8%'},
+            marginTop: { xs:'35%', lg: '8%'},
         },
         subtitle1: {
             display: 'flex',
             flexDirection: {lg: 'row'},
-            marginTop: { xs:'2%', lg: '10%'},
+            marginTop: { xs:'7%', lg: '10%'},
         },
         subtitle1Title: {
             fontSize: { xs:'21px', lg: '24px'},
@@ -33,15 +34,15 @@ export default function Intro() {
         },
         subtitle1Link: {
             fontFamily: 'Grape Nuts',
-            fontSize: { xs:'18px', lg: '24px'},
+            fontSize: { xs:'22px', lg: '24px'},
             marginLeft: { xs:'5px', lg: '13px'},
-            marginTop: { xs:'7px', lg: '6.5px'}
+            marginTop: { xs:'3px', lg: '6.5px'}
 
         },
         subtitle2: {
             display: 'flex',
             flexDirection: { lg: 'row'},
-            marginTop: { xs:'5%', lg: '2.5%'},
+            marginTop: { xs:'3%', lg: '2.5%'},
         },
         subtitle2Title: {
             fontSize: { xs:'21px', lg: '24px'},
@@ -49,9 +50,9 @@ export default function Intro() {
         subtitle2Link: {
             fontFamily: 'Grape Nuts',
             color: '#AA170D',
-            fontSize: { xs:'18px', lg: '24px'},
+            fontSize: { xs: '22px', lg: '24px'},
             marginLeft: { xs:'11px', lg: '13px'},
-            marginTop: { xs:'4.5px', lg: '6.5px'},
+            marginTop: { xs:'2.5px', lg: '6.5px'},
         }
 
     }

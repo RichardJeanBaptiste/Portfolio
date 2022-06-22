@@ -8,7 +8,7 @@ export default function Footer() {
 
     const Styles = {
         root: {
-           marginTop: '3%',
+           marginTop: '7%',
            paddingBottom: '.5%',
         },
         footerBox: {
@@ -20,6 +20,7 @@ export default function Footer() {
         leftFooter: {
             fontSize: '1.55rem',
             width: { lg: '40%'},
+            textDecoration: 'underline',
         },
         linkStyle: {
             fontSize: { lg: '1.5rem'}
@@ -30,15 +31,15 @@ export default function Footer() {
     return (
         <Box sx={Styles.root}>
             <Box sx={Styles.footerBox}>
-                <Typography variant='body1' component='p' sx={Styles.leftFooter}>Developed By Richard Jean-Baptiste</Typography>
+                <Typography variant='h6' component='h6' sx={Styles.leftFooter}>Developed By Richard Jean-Baptiste</Typography>
                 <Grid container  spacing={1} direction='row' alignItems='center' justifyContent='flex-end'sx={{ width: '90vw'}}>
-                    <Grid item xs={2} lg={1}>
+                    <Grid item xs={3} lg={1}>
                         <Link href='https://github.com/RichardJeanBaptiste' underline='hover' variant='body1' sx={Styles.linkStyle}>Github</Link>
                     </Grid>
-                    <Grid item xs={2} lg={1}>
+                    <Grid item xs={3} lg={1}>
                         <Link href='mailto:Richinbk1@gmail.com' variant='body1' underline='hover' sx={Styles.linkStyle}>Email</Link>
                     </Grid>
-                    <Grid item xs={2} lg={1}>
+                    <Grid item xs={3} lg={1}>
                         <Link href='#' variant='body1' underline='hover' sx={Styles.linkStyle}>Blog</Link>
                     </Grid>
                 </Grid>
